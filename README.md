@@ -1,2 +1,2 @@
 # laravel-grpc
-gRPC client for Laravel
+gRPC client for php Laravel
