@@ -1,0 +1,26 @@
+{
+    "name": "yandy/laravel-grpc",
+    "description": "grpc client for php laravel",
+    "authors": [
+        {
+            "name": "yandy",
+            "email": "3945222@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Yandy\\grpc\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yandy\\grpc\\GrpcServiceProvider"
+            ],
+            "aliases": {
+                "GrpcClient": "Yandy\\grpc\\Facades\\GrpcClient"
+            }
+        }
+    }
+}
