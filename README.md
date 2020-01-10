@@ -14,6 +14,28 @@ laravel-grpc客户端
 4.使用
 > use Yandy\grpc\Facades\GrpcClient;
 
+#### 客户端代码示例 UserClient
+<?php
+namespace App\RpcClient;
+
+use App\Grpc\HiReply;
+use App\Grpc\HiUser;
+
+class UserClient extends \Grpc\BaseStub{
+
+    public function __construct($hostname, $opts, $channel = null) {
+        parent::__construct($hostname, $opts, $channel);
+    }
+
+    //测试grpc客户端
+    public function sayHello(HiUser $argument,$metadata=[],$options=[]){
+        return $this->_simpleRequest('/grpc.hi/sayHello',
+            $argument,
+            ['\App\Grpc\HiReply', 'decode'],
+            $metadata, $options);
+    }
+
+}
 
 
 #### 示例
