@@ -14,7 +14,7 @@ laravel-grpc客户端
 4.使用
 > use Yandy\grpc\Facades\GrpcClient;
 
-#### 客户端代码示例 UserClient
+#### 客户端示例代码 UserClient
 <?php
 namespace App\RpcClient;
 
@@ -36,7 +36,7 @@ class UserClient extends \Grpc\BaseStub{
     }
 
 }
-
+?>
 
 #### 示例
     <?php
